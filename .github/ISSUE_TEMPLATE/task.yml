@@ -1,7 +1,6 @@
 name: 档案填充任务
 description: 记录一个待填充或待修订的档案条目
 title: "[填充] "
-labels: ["todo"]
 body:
   - type: input
     id: section
