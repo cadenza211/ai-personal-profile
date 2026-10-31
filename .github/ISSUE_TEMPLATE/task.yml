@@ -1,0 +1,33 @@
+name: 档案填充任务
+description: 记录一个待填充或待修订的档案条目
+title: "[填充] "
+labels: ["todo"]
+body:
+  - type: input
+    id: section
+    attributes:
+      label: 对应章节
+      description: 例如：第 5 节 项目经验与成果
+      placeholder: 第 X 节 章节名
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 要填入或修改的内容
+      description: 直接写最终文本，便于复制进 README
+      placeholder: |
+        - 条目一
+        - 条目二
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 完成标准
+      options:
+        - label: 已写入 README.md
+        - label: 已同步 CHANGELOG.md
+        - label: 已提交 commit 并推送
