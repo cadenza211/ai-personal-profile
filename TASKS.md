@@ -1,6 +1,8 @@
 # 待办与填充任务（使用 GitHub Issues 跟踪）
 
-本仓库用 **Issues** 作为待办清单，可选再配合 **Projects** 看板跟踪状态。
+本仓库用 **Issues** 作为待办清单，并用 **Projects** 看板跟踪状态。
+
+- 看板：[档案填充看板](https://github.com/users/cadenza211/projects/1)（已关联本仓库，Status 字段：Todo / In progress / Done）
 
 ## 状态流转
 
