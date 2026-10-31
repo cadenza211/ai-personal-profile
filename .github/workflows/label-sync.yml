@@ -1,0 +1,26 @@
+name: Label sync
+
+on:
+  push:
+    paths:
+      - .github/workflows/label-sync.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or update the three tracking labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          gh label create todo  --color 0e8a16 --description "待填充 / 待处理" --force --repo "$REPO"
+          gh label create doing --color fbca04 --description "正在填充或验证" --force --repo "$REPO"
+          gh label create done  --color 6e7781 --description "已合并到 README" --force --repo "$REPO"
+          gh label list --repo "$REPO" --limit 50

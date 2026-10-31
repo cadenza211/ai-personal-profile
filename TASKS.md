@@ -10,9 +10,10 @@
 | `doing` | 正在填充或验证 |
 | `done` | 已合并到 README |
 
-## 建议标签
+## 标签
 
-在 `Labels` 页面新建以下三个标签即可与上表对齐：`todo`（绿色）、`doing`（黄色）、`done`（灰色）。
+`todo`（绿）、`doing`（黄）、`done`（灰）由 `.github/workflows/label-sync.yml` 幂等创建/更新，
+在该工作流文件变动或被手动触发（Actions → Label sync → Run workflow）时执行。
 
 ## 约定
 
